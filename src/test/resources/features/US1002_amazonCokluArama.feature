@@ -1,6 +1,6 @@
 Feature: US1002 Kullanıcı amazon anasayfada birden fazla urun aratır
 
-  @wip
+
   Scenario: TC02 Kullanıcı urunleri aratip test edebilmeli
 
     Given kullanici amazon anasayfaya gider
