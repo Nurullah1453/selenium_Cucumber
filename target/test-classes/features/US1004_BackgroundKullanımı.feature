@@ -11,6 +11,7 @@ Feature: US1004 Kullanıcı bastaki ortak adımlar icin Background kullanır
     And arama sonuclarinin "Nutella" icerdigini test eder
     And sayfayi kapatir
 
+    @p2
   Scenario: TC04 Kullanıcı parametreli method ile Java aratır
 
 

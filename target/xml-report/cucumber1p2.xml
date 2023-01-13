@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="63.185">
+    <testcase classname="US1003 Kullanıcı parametre olarak girilen degerleri aratır" name="TC04 Kullanıcı parametreli method ile Java aratır" time="46.284">
+        <system-out><![CDATA[Given kullanici amazon anasayfaya gider.....................................passed
+Then amazon arama kutusuna "Java" yazip aratir..............................passed
+And arama sonuclarinin "Java" icerdigini test eder..........................passed
+And sayfayi kapatir.........................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="US1004 Kullanıcı bastaki ortak adımlar icin Background kullanır" name="TC04 Kullanıcı parametreli method ile Java aratır" time="15.455">
+        <system-out><![CDATA[Given kullanici amazon anasayfaya gider.....................................passed
+Then amazon arama kutusuna "Java" yazip aratir..............................passed
+And arama sonuclarinin "Java" icerdigini test eder..........................passed
+And 3 saniye bekler.........................................................passed
+And sayfayi kapatir.........................................................passed
+]]></system-out>
+    </testcase>
+</testsuite>

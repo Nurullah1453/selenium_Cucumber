@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
@@ -11,6 +12,7 @@ import utilities.Driver;
 import java.util.Set;
 
 public class WebUniversityStepdefinitions {
+    Faker faker=new Faker();
     WebUniversityPage webUniversityPage=new WebUniversityPage();
     String ilkSayfaWHD;
 
@@ -45,11 +47,11 @@ public class WebUniversityStepdefinitions {
     }
     @Then("username kutusuna deger yazar")
     public void username_kutusuna_deger_yazar() {
-        webUniversityPage.userNameKutusu.sendKeys(ConfigReader.getProperty("wduUsernameDeger"));
+        webUniversityPage.userNameKutusu.sendKeys(faker.name().username());
     }
     @Then("password kutusuna deger yazar")
     public void password_kutusuna_deger_yazar() {
-        webUniversityPage.passwordKutusu.sendKeys(ConfigReader.getProperty("wduPasswordDeger"));
+        webUniversityPage.passwordKutusu.sendKeys(faker.internet().password());
     }
     @Then("webUniversity login butonuna basar")
     public void web_university_login_butonuna_basar() {

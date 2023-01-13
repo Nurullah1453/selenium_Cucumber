@@ -1,7 +1,8 @@
-
+@smoke
 Feature: US1003 Kullanıcı parametre olarak girilen degerleri aratır
 
 
+  @p1
   Scenario: TC03 Kullanıcı parametreli method ile nutella aratır
 
     Given kullanici amazon anasayfaya gider
@@ -9,6 +10,7 @@ Feature: US1003 Kullanıcı parametre olarak girilen degerleri aratır
     And arama sonuclarinin "Nutella" icerdigini test eder
     And sayfayi kapatir
 
+    @p2
     Scenario: TC04 Kullanıcı parametreli method ile Java aratır
 
       Given kullanici amazon anasayfaya gider
@@ -16,6 +18,7 @@ Feature: US1003 Kullanıcı parametre olarak girilen degerleri aratır
       And arama sonuclarinin "Java" icerdigini test eder
       And sayfayi kapatir
 
+      @p1
       Scenario: TC05 Kullanıcı parametreli method ile Samsung aratır
 
         Given kullanici amazon anasayfaya gider

@@ -1,4 +1,4 @@
-@wip
+
 Feature: US1012 Window Testi
 
   Scenario: TC17 Kullanici yeni acilan window'u test edebilmeli
@@ -14,6 +14,6 @@ Feature: US1012 Window Testi
     And Ok diyerek Popup’i kapatir
     Then Ilk sayfaya geri doner
     And Ilk sayfaya donuldugunu test eder
-    Then sayfayi kapatir
+    Then acilan tum sayfalari kapatir
 
 

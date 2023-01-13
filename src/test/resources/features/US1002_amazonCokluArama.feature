@@ -1,3 +1,4 @@
+@smoke
 Feature: US1002 Kullanıcı amazon anasayfada birden fazla urun aratır
 
 
