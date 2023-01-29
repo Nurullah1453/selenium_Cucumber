@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="21.714">
-    <testcase classname="US1014" name="TC19" time="20.343">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="43.524">
+    <testcase classname="US1015" name="TC20" time="42.51">
         <system-out>
-            <![CDATA[Given Kullanici google sayfasina gider......................................passed
-Then Arama Kutusuna karsilastirma yapmak istedigi para birimlerini girer....passed
-Then Para birimlerinin karsilastirmasini alir...............................passed
-And Verilen degerlerin ikiden kucuk oldugunu dogrular.......................passed
+            <![CDATA[Given kullanici "qdUrl" anasayfaya gider....................................passed
+Then cookie varsa kabul eder................................................passed
+Then ilk sayfa login linkine click yapar....................................passed
+When kullanici kutusuna "qdGecerliUsername" yazar...........................passed
+Then password kutusuna "qdGecerliPassword" yazar............................passed
+Then login butonuna basar...................................................passed
+Then qd arama kutusuna "Java" yazip gonderir................................passed
+When java kursunu secerek sepete ekler......................................passed
+Then urunun sepete eklendigi test edilir....................................passed
+Then urunu listeden cikarir.................................................passed
+When urunun listeden cikarildigi test eder..................................passed
 ]]>
         </system-out>
     </testcase>

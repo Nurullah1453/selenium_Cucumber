@@ -27,4 +27,18 @@ public class QualitydemyPage {
 
     @FindBy(xpath = "//a[text()='Accept']")
     public WebElement cookie;
+
+    @FindBy(xpath = "//*[@placeholder='Search for courses']")
+    public WebElement aramaKutusu;
+
+    @FindBy(xpath = "(//a[@class='course-title'])[5]")
+    public WebElement ucAylikJavaKursu;
+
+    @FindBy(xpath = "//button[@onclick='handleAddToWishlist(this)']")
+    public WebElement addWislistButton;
+
+    @FindBy(xpath = "//*[@class='btn btn-add-wishlist active']")
+    public WebElement addedWishlistButton;
+
+
 }

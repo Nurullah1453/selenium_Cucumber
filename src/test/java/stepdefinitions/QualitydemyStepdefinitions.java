@@ -2,9 +2,14 @@ package stepdefinitions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import pages.QualitydemyPage;
 import utilities.ConfigReader;
+import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class QualitydemyStepdefinitions {
     QualitydemyPage qualitydemyPage=new QualitydemyPage();
@@ -53,5 +58,42 @@ public class QualitydemyStepdefinitions {
     @And("password kutusuna manuel olarak {string} yazar")
     public void passwordKutusunaManuelOlarakYazar(String password) {
         qualitydemyPage.passwordKutusu.sendKeys(password);
+    }
+
+    @Then("qd arama kutusuna {string} yazip gonderir")
+    public void qdAramaKutusunaYazipGonderir(String aratilacakKelime) {
+        qualitydemyPage.aramaKutusu.sendKeys(aratilacakKelime+ Keys.ENTER);
+    }
+
+    @When("java kursunu secerek sepete ekler")
+    public void javaKursunuSecerekSepeteEkler() {
+        Actions actions=new Actions(Driver.getDriver());
+        actions.sendKeys(Keys.PAGE_DOWN)
+                .sendKeys(Keys.PAGE_DOWN)
+                .perform();
+        ReusableMethods.bekle(3);
+        actions.click(qualitydemyPage.ucAylikJavaKursu).perform();
+        ReusableMethods.bekle(3);
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        ReusableMethods.bekle(1);
+        actions.click(qualitydemyPage.addWislistButton).perform();
+    }
+
+    @Then("urunun sepete eklendigi test edilir")
+    public void urununSepeteEklendigiTestEdilir() {
+        Assert.assertTrue(qualitydemyPage.addedWishlistButton.isDisplayed());
+    }
+
+
+    @Then("urunu listeden cikarir")
+    public void urunuListedenCikarir() {
+        ReusableMethods.bekle(2);
+        qualitydemyPage.addedWishlistButton.click();
+    }
+
+    @When("urunun listeden cikarildigi test eder")
+    public void urununListedenCikarildigiTestEder() {
+        ReusableMethods.bekle(2);
+        Assert.assertTrue(qualitydemyPage.addWislistButton.isDisplayed());
     }
 }
