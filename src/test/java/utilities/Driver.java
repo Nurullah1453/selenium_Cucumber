@@ -10,15 +10,16 @@ import java.time.Duration;
 
 public class Driver {
 
-    private Driver(){
+    private Driver() {
 
     }
 
     static WebDriver driver;
-    public static WebDriver getDriver(){
 
-        String browser=ConfigReader.getProperty("browser");
-        if (driver==null) {
+    public static WebDriver getDriver() {
+
+        String browser = ConfigReader.getProperty("browser");
+        if (driver == null) {
 
             switch (browser) {
                 case "chrome":
@@ -28,17 +29,17 @@ public class Driver {
 
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
-                    driver=new FirefoxDriver();
+                    driver = new FirefoxDriver();
                     break;
 
                 case "safari":
                     WebDriverManager.safaridriver().setup();
-                    driver=new SafariDriver();
+                    driver = new SafariDriver();
                     break;
 
                 default:
                     WebDriverManager.chromedriver().setup();
-                    driver=new ChromeDriver();
+                    driver = new ChromeDriver();
             }
 
 
@@ -50,17 +51,21 @@ public class Driver {
 
     }
 
-    public static void closeDriver(){
-        if (driver != null){
+    public static void closeDriver() {
+        if (driver != null) {
             driver.close();
-            driver=null;
+            driver = null;
         }
 
     }
-    public static void quitDriver(){
-        if (driver != null){
+
+
+    public static void quitDriver() {
+        if (driver != null) {
             driver.quit();
-            driver=null;
+            driver = null;
+
         }
     }
+
 }

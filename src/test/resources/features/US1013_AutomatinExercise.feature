@@ -1,4 +1,4 @@
-@wip
+
 Feature: US1013 Automation exercise sitesinde kullanici olusturma
 
   Scenario: TC18 Kullanici AutomationExercise sayfasinda kullanici olusturabilmeli
