@@ -1,7 +1,7 @@
-@wip
+
   Feature:US1015
 
-    Scenario: TC20
+    Scenario: TC21
 
       Given kullanici "qdUrl" anasayfaya gider
       Then cookie varsa kabul eder
@@ -14,4 +14,9 @@
       Then urunun sepete eklendigi test edilir
       Then urunu listeden cikarir
       When urunun listeden cikarildigi test eder
+
+
+
+
+
 

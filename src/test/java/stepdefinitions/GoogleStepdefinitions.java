@@ -41,4 +41,9 @@ public class GoogleStepdefinitions {
         paraDegeri=paraDegeri.replace(",",".");
         Assert.assertTrue(Double.parseDouble(paraDegeri)<2.0);
     }
+
+    @Then("Arama Kutusuna karsilastirma yapmak istedigi para birimlerini girer{int}")
+    public void aramaKutusunaKarsilastirmaYapmakIstedigiParaBirimleriniGirer(int arg0) {
+        googlePage.googleAramaKutusu.sendKeys("Dollar to Euro"+ Keys.ENTER);
+    }
 }
